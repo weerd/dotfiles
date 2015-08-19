@@ -1,0 +1,9 @@
+[user]
+  name = Diego Lorenzo
+  email = diego@diegolorenzo.com
+[color]
+  ui = true
+[core]
+  excludesfile = ~/.gitignore
+[push]
+  default = simple

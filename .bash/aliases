@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+# ------------------------------------------------------------------------------
+# Aliases
+# ------------------------------------------------------------------------------
+
+
+
+# UNIX
+# ------------------------------------------------------------------------------
+
+# Use coreutils `ls` if available.
+hash gls >/dev/null 2>&1 || alias gls="ls"
+
+# Detect which `ls` flavor is in use
+if gls --color > /dev/null 2>&1; then # GNU `ls`
+  colorflag="--color"
+else # OS X `ls`
+  colorflag="-G"
+fi
+
+# List files options
+# F = put `/` after folders
+# h = byte unit suffixes
+alias ls='CLICOLOR_FORCE=1 gls -aFh ${colorflag} --group-directories-first'
+
+# List all files
+alias la="ls -la"
+
+
+
+# OS X
+# ------------------------------------------------------------------------------
+
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'

@@ -7,14 +7,17 @@
 
 
 
-# Define installation directory
-dir="$HOME/installation"
+# Setup Code Directory
+# ------------------------------------------------------------------------------
+# Create "~/Code" directory that will house all code projects and repos, then 
+# download the dotfiles repo and run the "bootstrap.sh" file.
 
-# Make directory and retrieve dotfiles repository
-mkdir -p $dir
-cd $dir
-git clone --recursive https://github.com/weerd/dotfiles.git
+dir="$HOME/Code"
+
+mkdir -p $dir && cd $dir
+git clone git@github.com:weerd/dotfiles.git
 cd dotfiles
 
-# Begin the setup bootstrapping process
+
+# Begin the setup bootstrapping process.
 bash bootstrap.sh

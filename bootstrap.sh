@@ -20,14 +20,6 @@ source ./extras/colors
 
 
 
-# Create Code Directory
-# ------------------------------------------------------------------------------
-# This directory will house all code projects and repos from GitHub.
-
-mkdir -p $HOME/Code
-
-
-
 # Install Homebrew
 # ------------------------------------------------------------------------------
 # Check if Homebrew exists and if not install it.
@@ -41,6 +33,7 @@ fi
 
 # Install Binary Packages With Homebrew
 # ------------------------------------------------------------------------------
+
 printf "\n$INFO%s$RESET\n" "Running brew shell script..."
 ./brew.sh
 
@@ -48,6 +41,7 @@ printf "\n$INFO%s$RESET\n" "Running brew shell script..."
 
 # Install Native Mac Applications With Cask
 # ------------------------------------------------------------------------------
+
 printf "\n$INFO%s$RESET\n" "Running brew cask shell script..."
 ./brew-cask.sh
 

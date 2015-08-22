@@ -36,6 +36,7 @@ vagrant box add laravel/homestead
 
 # Setup Homestead
 # ------------------------------------------------------------------------------
+
 if [ ! -d "$HOME/Code" ]; then
   printf "\n$ERROR%s$RESET\n" "Please create a 'Code' directory in ~/."
   exit 1

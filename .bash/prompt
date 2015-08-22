@@ -8,6 +8,7 @@
 
 # Colors
 # ------------------------------------------------------------------------------
+
 if [[ $COLORTERM = gnome-* && $TERM = xterm ]]  && infocmp gnome-256color >/dev/null 2>&1; then 
   export TERM=gnome-256color
 elif infocmp xterm-256color >/dev/null 2>&1; then 
@@ -45,6 +46,7 @@ fi
 
 # Git Info
 # ------------------------------------------------------------------------------
+
 parse_git_dirty () {
   [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
 }
@@ -56,6 +58,7 @@ parse_git_branch () {
 
 # Custom Header
 # ------------------------------------------------------------------------------
+
 custom_prompt_header () {
   # Get width of terminal and subtract specified number of column units.
   let x_coord=$(tput cols)-21 

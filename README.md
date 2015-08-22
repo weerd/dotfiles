@@ -5,9 +5,9 @@ OS X configuration kit
 
 1) Install **Xcode** from the Mac App Store.
 
-2) Create an SSH key for computer.
+2) Generate an SSH key for computer.
 
-3) Generate and add SSH key to [GitHub](https://github.com) and [BitBucket](https://bitbucket.com).
+3) Add SSH key to [GitHub](https://github.com) and [BitBucket](https://bitbucket.com).
 
 4) Run the following command from the terminal:
 

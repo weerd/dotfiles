@@ -23,6 +23,7 @@ brew install caskroom/cask/brew-cask
 applications=(
 
   # Development
+  coderunner
   iterm2
   imageoptim
   transmit
@@ -62,3 +63,14 @@ applications=(
 
 echo "Installing applications..."
 brew cask install --appdir="/Applications" ${applications[@]} 
+
+
+
+# Update Alfred Search Scope
+# ------------------------------------------------------------------------------
+# Applications installed using Cask are symlinked to the /Applications folder, 
+# so we need to update Alfred's search path to include the directory where these
+# applications can actually be found.
+
+echo "Updating Alfred search scope..."
+brew cask alfred link

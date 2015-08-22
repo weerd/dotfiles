@@ -7,12 +7,7 @@
 
 
 
-# Output Colors
-# ------------------------------------------------------------------------------
-
-ERROR=$(tput setaf 196)
-SUCCESS=$(tput setaf 34)
-RESET=$(tput sgr0)
+source ./extras/colors
 
 
 
@@ -35,13 +30,19 @@ fi
 # Install Homestead Vagrant Box
 # ------------------------------------------------------------------------------
 
-# vagrant box add laravel/homestead
-printf "\n$SUCCESS%s$RESET\n" "Homestead installed."
+vagrant box add laravel/homestead
 
 
 
-
-if [ -d "$HOME/Code" ]; then
-  
+# Setup Homestead
+# ------------------------------------------------------------------------------
+if [ ! -d "$HOME/Code" ]; then
+  printf "\n$ERROR%s$RESET\n" "Please create a 'Code' directory in ~/."
+  exit 1
 fi
 
+git clone git@github.com:laravel/homestead.git $HOME/Code/homestead
+
+cd $HOME/Code/homestead && bash init.sh
+
+printf "\n$SUCCESS%s$RESET\n" "Homestead has been properly installed. Now go build some cool stuff in Laravel!"

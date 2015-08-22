@@ -26,7 +26,7 @@ if test ! $(which virtualbox); then
 fi
 
 if test ! $(which vagrant); then
-  echo "\n$ERROR%s$RESET\n" "Please install Vagrant to proceed."
+  printf "\n$ERROR%s$RESET\n" "Please install Vagrant to proceed."
   exit 1
 fi
 
@@ -35,7 +35,13 @@ fi
 # Install Homestead Vagrant Box
 # ------------------------------------------------------------------------------
 
-vagrant box add laravel/homestead
-
-
+# vagrant box add laravel/homestead
 printf "\n$SUCCESS%s$RESET\n" "Homestead installed."
+
+
+
+
+if [ -d "$HOME/Code" ]; then
+  
+fi
+

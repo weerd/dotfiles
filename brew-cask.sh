@@ -7,10 +7,14 @@
 
 
 
+source ./extras/colors
+
+
+
 # Brew Cask Setup
 # ------------------------------------------------------------------------------
 
-echo "Tapping caskroom formulae and installing Brew Cask..."
+printf "\n$INFO%s$RESET\n" "Tapping caskroom formulae and installing Brew Cask..."
 brew tap caskroom/cask
 brew tap caskroom/versions     
 brew install caskroom/cask/brew-cask
@@ -62,7 +66,7 @@ applications=(
 # The applications will be installed in /Applications instead of the default
 # Cask directory location in /Users/$user/Applications.
 
-echo "Installing applications..."
+printf "\n$INFO%s$RESET\n" "Installing applications..."
 brew cask install --appdir="/Applications" ${applications[@]} 
 
 
@@ -73,5 +77,5 @@ brew cask install --appdir="/Applications" ${applications[@]}
 # so we need to update Alfred's search path to include the directory where these
 # applications can actually be found.
 
-echo "Updating Alfred search scope..."
+printf "\n$INFO%s$RESET\n" "Updating Alfred search scope..."
 brew cask alfred link

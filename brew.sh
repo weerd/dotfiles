@@ -7,14 +7,18 @@
 
 
 
+source ./extras/colors
+
+
+
 # Homebrew Setup
 # ------------------------------------------------------------------------------
 
-echo "Updating & upgrading Homebrew..."
+printf "\n$INFO%s$RESET\n" "Updating & upgrading Homebrew..."
 brew update
 brew upgrade
 
-echo "Tapping mac duplicate applications formulae..."
+printf "\n$INFO%s$RESET\n" "Tapping mac duplicate applications formulae..."
 brew tap homebrew/dupes
 
 
@@ -44,7 +48,7 @@ binaries=(
 # Install Binaries
 # ------------------------------------------------------------------------------
 
-echo "Installing binaries..."
+printf "\n$INFO%s$RESET\n" "Installing binaries..."
 brew install ${binaries[@]}
 
 
@@ -52,5 +56,5 @@ brew install ${binaries[@]}
 # Cleanup
 # ------------------------------------------------------------------------------
 
-echo "Cleaning up Homebrew..."
+printf "\n$INFO%s$RESET\n" "Cleaning up Homebrew..."
 brew cleanup

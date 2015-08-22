@@ -51,6 +51,7 @@ applications=(
   # amazon-cloud-drive (issues with installation)
   amazon-music
   send-to-kindle
+  steam
 
 )
 

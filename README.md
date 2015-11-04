@@ -1,3 +1,5 @@
+<h1>![dotfiles repo banner](assets/dotfiles_banner.png)</h1>
+
 # dotfiles
 OS X configuration kit.
 

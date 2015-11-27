@@ -40,10 +40,8 @@ applications=(
   evernote
   hazel
 
-  # Browswers
+  # Browsers
   opera
-  firefox
-  google-chrome
   google-chrome-canary
 
   # Miscellaneous
@@ -56,6 +54,25 @@ applications=(
   amazon-music
   send-to-kindle
   steam
+  
+  # Others To Include
+  # phpstorm
+  # kindle
+  # spotify
+  # brackets
+  # clamxav
+  # transmit
+  # github
+  # rdio
+  # sequelpro
+  # caffeine
+  # mou
+  # gitx
+  # helium
+  # airfoil
+  # dash
+  # dbappx
+  # lastpass
 
 )
 

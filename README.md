@@ -5,7 +5,7 @@ OS X configuration kit.
 
 ## Setup Steps
 
-1) Install **Xcode** from the Mac App Store.
+1) Install **Xcode** from the Mac App Store and run it to accept the license and install **git**.
 
 2) Generate an SSH key for computer. Use these [instructions](https://help.github.com/articles/generating-ssh-keys/) if you don't remember how to do it.
 

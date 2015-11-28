@@ -26,7 +26,7 @@ source ./extras/colors
 
 if test ! $(which brew); then
   printf "\n$INFO%s$RESET\n" "Installing Homebrew..."
-  ruby -e "$(curl -fsSL "https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
 
@@ -49,7 +49,7 @@ printf "\n$INFO%s$RESET\n" "Running brew cask shell script..."
 
 # Install non-Homebrew binary packages
 # ------------------------------------------------------------------------------
-# @TODO: may need to change persmissions on this file to make executable.
+# @TODO: may need to change permissions on this file to make executable.
 
 printf "\n$INFO%s$RESET\n" "Running binary applications shell script..."
 ./mac_bins_installations.sh 

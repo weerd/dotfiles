@@ -58,3 +58,4 @@ brew install ${binaries[@]}
 
 printf "\n$INFO%s$RESET\n" "Cleaning up Homebrew..."
 brew cleanup
+

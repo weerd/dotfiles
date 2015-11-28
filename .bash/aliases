@@ -34,3 +34,15 @@ alias la="ls -la"
 
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+
+
+
+# OS X
+# ------------------------------------------------------------------------------
+alias gs="git status"
+alias ga="git add"
+alias gr="git rm"
+alias gc="git commit"
+alias gpl="git pull"
+alias gph="git push"
+alias gco="git checkout"

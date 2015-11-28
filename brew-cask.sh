@@ -26,53 +26,43 @@ brew install caskroom/cask/brew-cask
 
 applications=(
 
-  # Development
-  coderunner
-  iterm2
-  imageoptim
-  transmit
-  virtualbox
-  vagrant
-
-  # Productivity
+  adobe-creative-cloud
   alfred
+  amazon-cloud-drive
+  amazon-music
+  beamer
+  coderunner
   dropbox
   evernote
-  hazel
-
-  # Browsers
-  opera
   google-chrome-canary
-
-  # Miscellaneous
-  beamer
-  vlc
   handbrake
-  transmission
-  adobe-creative-cloud
-  # amazon-cloud-drive (issues with installation)
-  amazon-music
+  hazel
+  imageoptim
+  iterm2
+  opera
   send-to-kindle
   steam
+  sequel-pro
+  transmission
+  transmit
+  vagrant
+  virtualbox
+  vlc
   
   # Others To Include
-  # phpstorm
-  # kindle
-  # spotify
+  # airfoil
   # brackets
   # clamxav
-  # transmit
-  # github
-  # rdio
-  # sequelpro
-  # caffeine
-  # mou
-  # gitx
-  # helium
-  # airfoil
   # dash
   # dbappx
+  # github
+  # gitx
+  # helium
   # lastpass
+  # mou
+  # phpstorm
+  # rdio
+  # spotify
 
 )
 

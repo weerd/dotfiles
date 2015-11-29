@@ -76,6 +76,31 @@ defaults write com.apple.screencapture type -string "png"
 # Disable shadow in screenshots
 defaults write com.apple.screencapture disable-shadow -bool true
 
+# Show external disks on desktop
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
+
+# Hide hard disks on desktop
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
+
+# Show connected servers on desktop
+defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
+
+# Show removable media on desktop
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+
+# Set Home directory as the default location for new Finder windows
+# For other paths, use `PfLo` and `file:///full/path/here/`
+# Other available options include: `PfVo`, `PfHm`, `PfDe`
+defaults write com.apple.finder NewWindowTarget -string "PfLo"
+defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/"
+
+# Show Sidebar items
+defaults write com.apple.sidebarlists systemitems -dict-add ShowEjectables -bool true
+defaults write com.apple.sidebarlists systemitems -dict-add ShowRemovable -bool true
+defaults write com.apple.sidebarlists systemitems -dict-add ShowServers -bool true
+defaults write com.apple.sidebarlists systemitems -dict-add ShowHardDisks -bool true
+
+
 # Expand the following File Info panes:
 # “General”, “Open with”, and “Sharing & Permissions”
 defaults write com.apple.finder FXInfoPanesExpanded -dict \

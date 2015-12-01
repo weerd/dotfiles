@@ -15,13 +15,8 @@ source ./extras/colors
 # ------------------------------------------------------------------------------
 # Symlink necessary dotfiles into home directory.
 
-dir="$HOME/Code"
+./symlinks.sh
 
-printf "\n$INFO%s$RESET\n" "Symlinking dotfiles..."
-ln -s $dir/dotfiles/.bash ~/.bash
-ln -s $dir/dotfiles/.bash_profile ~/.bash_profile
-ln -s $dir/dotfiles/.gitconfig ~/.gitconfig
-source ~/.bash_profile
 
 
 # Initial Setup

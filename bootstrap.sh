@@ -56,7 +56,6 @@ printf "\n$INFO%s$RESET\n" "Running brew cask shell script..."
 
 # Install non-Homebrew binary packages
 # ------------------------------------------------------------------------------
-# @TODO: may need to change permissions on this file to make executable.
 
 printf "\n$INFO%s$RESET\n" "Running binary applications shell script..."
 ./mac_bins_installations.sh 
@@ -65,7 +64,6 @@ printf "\n$INFO%s$RESET\n" "Running binary applications shell script..."
 
 # Install non-Homebrew applications
 # ------------------------------------------------------------------------------
-# @TODO: may need to change persmissions on this file to make executable.
 
 printf "\n$INFO%s$RESET\n" "Running native applications shell script..."
 ./mac_apps_installations.sh

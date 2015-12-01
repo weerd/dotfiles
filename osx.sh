@@ -152,9 +152,18 @@ defaults write com.apple.dock expose-animation-duration -float 0.1
 
 
 
-# Hot Corners
+# Desktop & Screen Saver
 # ------------------------------------------------------------------------------
 
+# Ask for password after 5 seconds
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 5
+
+# Set Screen Saver: Flurry
+defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName -string "Flurry" path -string "/System/Library/Screen Savers/Flurry.saver" type -int 0
+
+
+# Hot Corners
 # Possible values:
 #  0: no-op
 #  2: Mission Control
@@ -192,6 +201,13 @@ defaults write com.apple.dock wvous-br-modifier -int 0
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+# Secondary click:
+# Possible values: OneButton, TwoButton, TwoButtonSwapped
+defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseButtonMode -string TwoButton
+
+# @TODO: Figure out how to set mouse Tracking Speed
+# @TODO: Figure out how to set keyboard shortcut for Spotlight search to be Option + Space
 
 # Increase sound quality for Bluetooth headphones/headsets
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40

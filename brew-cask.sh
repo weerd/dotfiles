@@ -60,7 +60,7 @@ applications=(
   # helium
   # lastpass
   # mou
-  # phpstorm
+  # brew cask install --appdir="/Applications" phpstorm // DoSomething
   # rdio
   # spotify
 
@@ -76,3 +76,10 @@ applications=(
 printf "\n$INFO%s$RESET\n" "Installing applications..."
 brew cask install --appdir="/Applications" ${applications[@]} 
 
+
+
+# Cleanup
+# ------------------------------------------------------------------------------
+
+printf "\n$INFO%s$RESET\n" "Cleaning up Homebrew Casks..."
+brew cask cleanup

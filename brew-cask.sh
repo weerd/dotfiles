@@ -58,7 +58,6 @@ applications=(
   # github
   # gitx
   # helium
-  # lastpass
   # mou
   # brew cask install --appdir="/Applications" phpstorm // DoSomething
   # rdio

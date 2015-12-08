@@ -23,6 +23,7 @@ source ./extras/colors
 # ------------------------------------------------------------------------------
 
 # Create directory to place screenshots
+
 mkdir -p $HOME/Screenshots
 
 

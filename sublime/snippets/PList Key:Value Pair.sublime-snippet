@@ -1,0 +1,11 @@
+<snippet>
+  <content><![CDATA[
+<key>$1</key>
+<string>$2</string>
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>plistkv</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.python</scope> -->
+  <description>PList Key/Value Pair</description>
+</snippet>

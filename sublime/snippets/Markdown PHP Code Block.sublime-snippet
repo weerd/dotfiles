@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[
+```php
+<?php
+
+$1
+
+?>
+```
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>mdphp</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.md</scope> -->
+  <description>Markdown Code Block for PHP</description>
+</snippet>

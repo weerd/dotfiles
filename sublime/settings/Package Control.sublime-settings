@@ -1,0 +1,13 @@
+{
+	"bootstrapped": true,
+	"installed_packages":
+	[
+		"Colorsublime",
+		"Emmet",
+		"MarkdownEditing",
+		"Origami",
+		"Package Control",
+		"PHP Companion",
+		"Sass"
+	]
+}

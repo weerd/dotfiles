@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>$1</title>
+    <link rel="icon" type="image/ico" href="/favicon.ico?v1">
+    <link rel="stylesheet" href="">
+  </head>
+
+  <body>
+    $2
+  </body>
+
+</html>
+
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>htmlbase</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>text.html.basic</scope>
+</snippet>

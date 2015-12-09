@@ -6,8 +6,8 @@
 # ------------------------------------------------------------------------------
 
 
-root="$HOME/Code/dotfiles"
-# sublime="$HOME/Library/Application Support"
+root=$HOME/Code/dotfiles
+sublime=$HOME/Library/Application\ Support/Sublime\ Text\ 3
 
 source ~/Code/dotfiles/extras/colors
 
@@ -26,18 +26,36 @@ ln -sf "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/loc
 # @see https://packagecontrol.io/installation
 
 printf "\n$INFO%s$RESET\n" "Installing Package Control for Sublime Text..."
-cd ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/
+cd "$sublime/Installed Packages/"
 curl -L -o "Package Control.sublime-package" "https://packagecontrol.io/Package%20Control.sublime-package"
 
 
 
-# Copy Settings
+# Symlink Settings
 # ------------------------------------------------------------------------------
-# @todo debating whether best to copy or just symlink the files? Maybe copy snippets, symlink settings?
 
-printf "\n$INFO%s$RESET\n" "Copying Sublime Text settings..."
-cp -u $root/sublime/settings/Package\ Control.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+printf "\n$INFO%s$RESET\n" "Symlinking Package Control settings to user directory..."
+ln -s "$root/sublime/settings/Package Control.sublime-settings" "$sublime/Packages/User"
 
-cp -u $root/sublime/snippets/* ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+printf "\n$INFO%s$RESET\n" "Symlinking Keymap settings to user directory..."
+ln -s "$root/sublime/settings/Default (OSX).sublime-keymap" "$sublime/Packages/User"
 
-cp $root/sublime/settings/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+printf "\n$INFO%s$RESET\n" "Symlinking Markdown settings to user directory..."
+ln -s "$root/sublime/settings/Markdown.sublime-settings" "$sublime/Packages/User"
+
+# @todo Something is missing and incorrect causing ST to error out when launching due to theme
+# mkdir -p "$sublime/Packages/Colorsublime - Themes"
+# cp -u "$root/sublime/themes/DeerAntlerDark.tmTheme.cache" "$sublime/Packages/Colorsublime - Themes"
+# mkdir -p "$sublime/Cache/Colorsublime - Themes"
+# cp -u "$root/sublime/themes/DeerAntlerDark.tmTheme.cache" "$sublime/Cache/Colorsublime - Themes"
+
+printf "\n$INFO%s$RESET\n" "Symlinking Sublime settings to user directory..."
+ln -s "$root/sublime/settings/Preferences.sublime-settings" "$sublime/Packages/User"
+
+
+
+# Copying Snippets
+# ------------------------------------------------------------------------------
+
+printf "\n$INFO%s$RESET\n" "Copying snippets to user directory..."
+cp -u "$root/sublime/snippets"/* "$sublime/Packages/User"

@@ -1,0 +1,5 @@
+[
+  { "keys": ["super+alt+ctrl+v"], "command": "create_pane", "args": {"direction": "right", "give_focus" : true} },
+  { "keys": ["super+alt+ctrl+h"], "command": "create_pane", "args": {"direction": "down", "give_focus" : true} },
+  { "keys": ["super+alt+ctrl+d"], "command": "destroy_pane", "args": {"direction": "self"} },
+]

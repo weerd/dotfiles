@@ -27,6 +27,7 @@ brew install caskroom/cask/brew-cask
 applications=(
 
   adobe-creative-cloud
+  airfoil
   alfred
   amazon-cloud-drive
   amazon-music
@@ -82,3 +83,4 @@ brew cask install --appdir="/Applications" ${applications[@]}
 
 printf "\n$INFO%s$RESET\n" "Cleaning up Homebrew Casks..."
 brew cask cleanup
+

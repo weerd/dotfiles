@@ -20,4 +20,5 @@ printf "\n$INFO%s$RESET\n" "Symlinking dotfiles..."
 ln -s $dir/dotfiles/dots/.bash ~/.bash
 ln -s $dir/dotfiles/dots/.bash_profile ~/.bash_profile
 ln -s $dir/dotfiles/dots/.gitconfig ~/.gitconfig
+ln -s $dir/dotfiles/dots/.gitignore ~/.gitignore
 source ~/.bash_profile

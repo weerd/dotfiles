@@ -39,6 +39,7 @@ applications=(
   hazel
   imageoptim
   iterm2
+  kindle
   opera
   send-to-kindle
   steam

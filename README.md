@@ -46,9 +46,31 @@ When the **bootstrap.sh** script runs, the following things will happen:
 
 ## Available Aliases
 
+Change directories into the `~/Desktop` directory:
+
+```
+$ desk
+```
+
+Change directories into the `~/Code` directory:
+
+```
+$ code
+```
+
+Open the `/etc/hosts` file in Sublime Text:
+
+```
+$ hosts
+```
+
+Show hidden files in the Finder:
+
 ```
 $ showFiles
 ```
+
+Hide files that should be hidden in the Finder:
 
 ```
 $ hideFiles

@@ -43,6 +43,7 @@ alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall F
 
 # Git
 # ------------------------------------------------------------------------------
+
 alias gs="git status"
 alias ga="git add"
 alias gr="git rm"
@@ -50,3 +51,10 @@ alias gc="git commit"
 alias gpl="git pull"
 alias gph="git push"
 alias gco="git checkout"
+
+
+
+# Laravel
+# ------------------------------------------------------------------------------
+
+alias homestead='function __homestead() { (cd ~/Code/homestead && vagrant $*); unset -f __homestead; }; __homestead'

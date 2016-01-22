@@ -48,30 +48,50 @@ When the **bootstrap.sh** script runs, the following things will happen:
 
 Change directories into the `~/Desktop` directory:
 
-```
+```shell
 $ desk
 ```
 
 Change directories into the `~/Code` directory:
 
-```
+```shell
 $ code
 ```
 
 Open the `/etc/hosts` file in Sublime Text:
 
-```
+```shell
 $ hosts
 ```
 
 Show hidden files in the Finder:
 
-```
+```shell
 $ showFiles
 ```
 
 Hide files that should be hidden in the Finder:
 
-```
+```shell
 $ hideFiles
 ```
+
+
+
+## Application Specific Setups
+
+### Moom 
+[**Moom**](https://manytricks.com/moom/) is a great application for moving around and zooming OSX windows, however there is currently no easy way to sync its great customizable configurations across computers.
+
+This repository provides two scripts that copy back and forth the Moom system preference file. Unfortunately, due to how OSX handles the preferences files, they cannot be symlinked to this repository since everytime the application settings are updated, the system preferences file is completed replaced. 
+
+Instead, we can run the included _export_ script to copy the preferences (once configured) into this repository, and back from the repository to the system (on another computer with Moom for example) using the _import_ script:
+
+```shell
+$ bash ~/path/to/this/repo/dotfiles/moom/export.sh
+```
+
+```shell
+$ bash ~/path/to/this/repo/dotfiles/moom/import.sh
+```
+

@@ -16,7 +16,7 @@ source ~/Code/dotfiles/extras/colors
 
 
 
-# Import Settings From System Preferences
+# Import Settings To System Preferences
 # ------------------------------------------------------------------------------
 
 if [ -f $root/moom/settings/com.manytricks.Moom.plist ]

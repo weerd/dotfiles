@@ -11,6 +11,9 @@
 		"Origami",
 		"Package Control",
 		"PHP Companion",
-		"Sass"
+		"Sass",
+		"SublimeLinter",
+		"SublimeLinter-html-tidy",
+		"SublimeLinter-php"
 	]
 }

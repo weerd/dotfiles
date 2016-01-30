@@ -43,7 +43,7 @@ ln -s "$root/sublime/settings/Default (OSX).sublime-keymap" "$sublime/Packages/U
 printf "\n$INFO%s$RESET\n" "Symlinking Markdown settings to user directory..."
 ln -s "$root/sublime/settings/Markdown.sublime-settings" "$sublime/Packages/User"
 
-# @todo Something is missing and incorrect causing ST to error out when launching due to theme
+# @TODO Something is missing and incorrect causing ST to error out when launching due to theme
 # mkdir -p "$sublime/Packages/Colorsublime - Themes"
 # cp -u "$root/sublime/themes/DeerAntlerDark.tmTheme.cache" "$sublime/Packages/Colorsublime - Themes"
 # mkdir -p "$sublime/Cache/Colorsublime - Themes"
@@ -54,8 +54,8 @@ ln -s "$root/sublime/settings/Preferences.sublime-settings" "$sublime/Packages/U
 
 
 
-# Copying Snippets
+# Import Snippets
 # ------------------------------------------------------------------------------
 
-printf "\n$INFO%s$RESET\n" "Copying snippets to user directory..."
-cp -u "$root/sublime/snippets"/* "$sublime/Packages/User"
+bash $root/sublime/import-snippets.sh
+

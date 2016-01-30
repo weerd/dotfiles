@@ -1,11 +1,13 @@
 {
 	"bold_folder_labels": true,
+	"caret_style": "phase",
 	"color_scheme": "Packages/Color Scheme - Default/Twilight.tmTheme",
 	"disable_tab_abbreviations": true,
 	"fade_fold_buttons": true,
 	"fold_buttons": true,
 	"font_size": 12,
 	"gutter": true,
+	"highlight_line": true,
 	"ignored_packages":
 	[
 		"Markdown",
@@ -17,6 +19,8 @@
 		"draw_active"
 	],
 	"line_numbers": false,
+	"line_padding_bottom": 1,
+  "line_padding_top": 1,
 	"margin": 0,
 	"overlay_scroll_bars": "enabled",
 	"rulers":

@@ -5,7 +5,6 @@
 	"disable_tab_abbreviations": true,
 	"fade_fold_buttons": true,
 	"fold_buttons": true,
-	"font_size": 12,
 	"gutter": true,
 	"highlight_line": true,
 	"ignored_packages":

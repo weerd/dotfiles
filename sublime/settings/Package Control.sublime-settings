@@ -6,6 +6,7 @@
 	"installed_packages":
 	[
 		"Colorsublime",
+		"EditorConfig",
 		"Emmet",
 		"Laravel Blade Highlighter",
 		"MarkdownEditing",

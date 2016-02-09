@@ -40,6 +40,9 @@ ln -s "$root/sublime/settings/Package Control.sublime-settings" "$sublime/Packag
 printf "\n$INFO%s$RESET\n" "Symlinking Keymap settings to user directory..."
 ln -s "$root/sublime/settings/Default (OSX).sublime-keymap" "$sublime/Packages/User"
 
+printf "\n$INFO%s$RESET\n" "Symlinking Mousemap settings to user directory..."
+ln -s "$root/sublime/settings/Default (OSX).sublime-mousemap" "$sublime/Packages/User"
+
 printf "\n$INFO%s$RESET\n" "Symlinking Markdown settings to user directory..."
 ln -s "$root/sublime/settings/Markdown.sublime-settings" "$sublime/Packages/User"
 

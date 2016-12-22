@@ -1,0 +1,14 @@
+<snippet>
+  <content><![CDATA[
+/** @test */
+public function ${1:test_name_here}()
+{
+    $2
+}
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>putest</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.php</scope> -->
+  <description>Individual Test Method for PHPUnit</description>
+</snippet>

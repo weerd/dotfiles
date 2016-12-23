@@ -44,13 +44,14 @@ alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall F
 # Git
 # ------------------------------------------------------------------------------
 
-alias gs="git status"
 alias ga="git add"
-alias gr="git rm"
 alias gc="git commit"
+alias gd="git diff"
+alias gr="git rm"
+alias gs="git status"
+alias gco="git checkout"
 alias gpl="git pull"
 alias gph="git push"
-alias gco="git checkout"
 
 
 

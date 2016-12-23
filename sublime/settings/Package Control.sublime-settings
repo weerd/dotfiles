@@ -7,6 +7,7 @@
 	[
 		"Babel",
 		"Colorsublime",
+		"DocBlockr",
 		"EditorConfig",
 		"Emmet",
 		"Laravel Blade Highlighter",

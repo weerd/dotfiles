@@ -5,6 +5,7 @@
 	"disable_tab_abbreviations": true,
 	"fade_fold_buttons": true,
 	"fold_buttons": true,
+	"font_size": 12,
 	"gutter": true,
 	"highlight_line": true,
 	"ignored_packages":
@@ -28,5 +29,5 @@
 	"spell_check": false,
 	"tab_size": 2,
 	"translate_tabs_to_spaces": true,
-	"word_wrap": "auto"
+	"word_wrap": false
 }

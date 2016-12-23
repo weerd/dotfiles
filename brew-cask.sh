@@ -45,6 +45,7 @@ applications=(
   send-to-kindle
   steam
   sequel-pro
+  techstoreclub-simple-comic
   transmission
   transmit
   vagrant
@@ -75,8 +76,7 @@ applications=(
 # Cask directory location in /Users/$user/Applications.
 
 printf "\n$INFO%s$RESET\n" "Installing applications..."
-brew cask install --appdir="/Applications" ${applications[@]} 
-
+brew cask install --appdir="/Applications" ${applications[@]}
 
 
 # Cleanup

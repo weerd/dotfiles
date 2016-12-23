@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[
+<?php
+
+use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Illuminate\Foundation\Testing\WithoutMiddleware;
+
+class ${1:ExampleTest} extends TestCase
+{
+    $2
+}
+
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>putestcase</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.php</scope> -->
+  <description>TestCase Class template for PHPUnit</description>
+</snippet>

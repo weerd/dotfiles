@@ -7,11 +7,11 @@ OS X configuration kit.
 
 ## Usage
 
-To use this repository for setting up your personal computer, it is recommended that you fork it and edit the files based on your needs. 
+To use this repository for setting up your personal computer after initial purchase or after reformatting it, I would recommend that you fork the repository and edit the files based on your needs.
 
 For example, you should definitely edit the **/dots/.gitconfig** file and change the information for the `[user]` to reflect your specific GitHub user information for submitting commits and pushing up code.
 
-Alternatively, you can also just use this repository as a guide for setting up your own custom dotfiles.
+Alternatively, you can also just use this repository as a guide for setting up your own custom dotfiles or you can try and run only specific scripts instead of the full setup.
 
 Whatever floats your boat is cool with me.
 

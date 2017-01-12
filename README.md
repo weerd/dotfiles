@@ -1,7 +1,21 @@
-![dotfiles repo banner](assets/dotfiles_banner.png)
+<p align="center">
+  <img alt="gears image for dotfiles banner" src="https://raw.githubusercontent.com/weerd/dotfiles/master/assets/dotfiles_banner.png" width="196" height="151">
+</p>
 
 # ~/.dotfiles
 OS X configuration kit.
+
+## Usage
+
+To use this repository for setting up your personal computer, it is recommended that you fork it and edit the files based on your needs. 
+
+For example, you should definitely edit the **/dots/.gitconfig** file and change the information for the `[user]` to reflect your specific GitHub user information for submitting commits and pushing up code.
+
+Alternatively, you can also just use this repository as a guide for setting up your own custom dotfiles.
+
+Whatever floats your boat is cool with me.
+
+
 
 ## Setup Steps
 

@@ -11,6 +11,14 @@ source ./extras/colors
 
 
 
+# Copy & Move Files
+# ------------------------------------------------------------------------------
+# Copy and move files into specified directory that can not be symlinked.
+
+./copy_move.sh
+
+
+
 # Symlink Dotfiles
 # ------------------------------------------------------------------------------
 # Symlink necessary dotfiles into home directory.
@@ -21,7 +29,6 @@ source ./extras/colors
 
 # Initial Setup
 # ------------------------------------------------------------------------------
-
 # Create directory to place screenshots
 
 mkdir -p $HOME/Screenshots

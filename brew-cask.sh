@@ -42,6 +42,7 @@ applications=(
   iterm2
   kindle
   opera
+  postman
   send-to-kindle
   steam
   sequel-pro

@@ -20,4 +20,4 @@ cd dotfiles
 
 
 # Begin the setup bootstrapping process.
-bash bootstrap.sh
+# bash bootstrap.sh  // stopping execution for now to help make updates.

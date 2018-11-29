@@ -16,4 +16,10 @@ source ./extras/colors
 
 dir="$HOME/Code"
 
-cp $dir/dotfiles/dots/.ssh/config ~/.ssh/config
+if [ ! -e ~/.ssh/config ]; then
+	cp $dir/dotfiles/dots/.ssh/config ~/.ssh/config
+
+	printf "\n$INFO - %s$RESET\n" "Copied SSH Config into home directory."
+else
+	printf "\n$INFO - %s$RESET\n" "SSH Config already exists in home directory."
+fi

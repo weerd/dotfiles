@@ -2,8 +2,12 @@
 
 
 # ------------------------------------------------------------------------------
-# Install Native Mac Applications
+# Install Native Applications
 # ------------------------------------------------------------------------------
+
+
+
+source ./extras/colors
 
 
 
@@ -21,6 +25,7 @@ cp -R "/Volumes/Sublime Text/Sublime Text.app" /Applications
 hdiutil unmount "/Volumes/Sublime Text/Sublime Text.app"
 rm "Sublime Text 3.dmg"
 
+printf "\n$INFO - %s$RESET\n" "Sublime Text 3 installed."
 
 
 # Browsers that will use the 1Password extension cannot be installed via 
@@ -36,6 +41,8 @@ cp -R "/Volumes/Google Chrome/Google Chrome.app" /Applications
 hdiutil unmount "/Volumes/Google Chrome"
 rm googlechrome.dmg
 
+printf "\n$INFO - %s$RESET\n" "Google Chrome installed."
+
 
 
 # Firefox Installation
@@ -46,6 +53,8 @@ hdiutil mount -nobrowse Firefox.dmg
 cp -R "/Volumes/Firefox/Firefox.app" /Applications
 hdiutil unmount "/Volumes/Firefox"
 rm Firefox.dmg
+
+printf "\n$INFO - %s$RESET\n" "Mozilla Firefox installed."
 
 
 

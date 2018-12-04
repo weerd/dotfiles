@@ -13,6 +13,7 @@ source ./extras/colors
 
 # Create Screenshots Directory
 # ------------------------------------------------------------------------------
+
 if [ ! -d $HOME/Screenshots ]; then
 	mkdir -p $HOME/Screenshots
 	

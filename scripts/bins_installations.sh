@@ -2,8 +2,12 @@
 
 
 # ------------------------------------------------------------------------------
-# Install Binary Mac Applications
+# Install Binary Applications
 # ------------------------------------------------------------------------------
+
+
+
+source ./extras/colors
 
 
 
@@ -21,6 +25,8 @@ cd ~/installation_temp
 
 curl -sS https://getcomposer.org/installer | php
 mv ~/installation_temp/composer.phar /usr/local/bin/composer
+
+printf "\n$INFO - %s$RESET\n" "Installed binary applications."
 
 
 

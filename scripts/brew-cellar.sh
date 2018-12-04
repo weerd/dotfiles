@@ -14,12 +14,13 @@ source ./extras/colors
 # Homebrew Setup
 # ------------------------------------------------------------------------------
 
-printf "\n$INFO%s$RESET\n" "Updating & upgrading Homebrew..."
 brew update
+
+printf "\n$INFO - %s$RESET\n" "Updated Homebrew."
+
 brew upgrade
 
-printf "\n$INFO%s$RESET\n" "Tapping mac duplicate applications formulae..."
-brew tap homebrew/dupes
+printf "\n$INFO - %s$RESET\n" "Upgraded Homebrew."
 
 
 
@@ -48,14 +49,16 @@ binaries=(
 # Install Binaries
 # ------------------------------------------------------------------------------
 
-printf "\n$INFO%s$RESET\n" "Installing binaries..."
 brew install ${binaries[@]}
+
+printf "\n$INFO - %s$RESET\n" "Installed binary packages."
 
 
 
 # Cleanup
 # ------------------------------------------------------------------------------
 
-printf "\n$INFO%s$RESET\n" "Cleaning up Homebrew..."
 brew cleanup
+
+printf "\n$INFO - %s$RESET\n" "Cleaning up Homebrew."
 

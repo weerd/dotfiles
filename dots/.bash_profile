@@ -7,9 +7,7 @@
 
 
 
-source ~/.bash/aliases
-source ~/.bash/completions
-source ~/.bash/exports
-source ~/.bash/prompt
-
-source ~/.bash/dosomething
+# source ~/.bash/aliases
+# source ~/.bash/completions
+# source ~/.bash/exports
+# source ~/.bash/prompt

@@ -15,13 +15,13 @@ source ./extras/colors
 # ------------------------------------------------------------------------------
 # Both VirtualBox and Vagrant are required to setup Homestead.
 
-if test ! $(which virtualbox); then
-  printf "\n$ERROR%s$RESET\n" "Please install VirtualBox to proceed."
+if [ ! $(which virtualbox) ]; then
+  printf "\n$ERROR - %s$RESET\n" "Please install VirtualBox to proceed."
   exit 1
 fi
 
-if test ! $(which vagrant); then
-  printf "\n$ERROR%s$RESET\n" "Please install Vagrant to proceed."
+if [ ! $(which vagrant) ]; then
+  printf "\n$ERROR - %s$RESET\n" "Please install Vagrant to proceed."
   exit 1
 fi
 

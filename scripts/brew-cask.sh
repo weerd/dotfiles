@@ -14,10 +14,17 @@ source ./extras/colors
 # Brew Cask Setup
 # ------------------------------------------------------------------------------
 
-printf "\n$INFO%s$RESET\n" "Tapping caskroom formulae and installing Brew Cask..."
-brew tap caskroom/cask
-brew tap caskroom/versions     
-brew install caskroom/cask/brew-cask
+# https://github.com/Homebrew/homebrew-cask
+# Cask scripts can be found in /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask/Casks
+brew tap homebrew/cask
+
+printf "\n$INFO - %s$RESET\n" "Tapped homebrew/cask for list of Cask scripts and installed Cask CLI."
+
+# https://github.com/Homebrew/homebrew-cask-versions
+# Alternate Cask scripts can be found in /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask-versions/Casks
+brew tap homebrew/cask-versions
+
+printf "\n$INFO - %s$RESET\n" "Tapped homebrew/cask-versions for list of alternate versiosn of Cask scripts."
 
 
 
@@ -27,45 +34,30 @@ brew install caskroom/cask/brew-cask
 applications=(
 
   adobe-creative-cloud
-  airfoil
   alfred
-  amazon-cloud-drive
   amazon-music
   beamer
   coderunner
   dropbox
   evernote
+  github
+  gog-galaxy
   google-chrome-canary
-  handbrake
   hazel
   imageoptim
   iterm2
+  kap
   kindle
   opera
   postman
   send-to-kindle
   steam
   sequel-pro
-  techstoreclub-simple-comic
-  transmission
-  transmit
+  simple-comic
   vagrant
   virtualbox
+  visual-studio-code
   vlc
-  
-  # Others To Include
-  # airfoil
-  # brackets
-  # clamxav
-  # dash
-  # dbappx
-  # github
-  # gitx
-  # helium
-  # mou
-  # brew cask install --appdir="/Applications" phpstorm // DoSomething
-  # rdio
-  # spotify
 
 )
 
@@ -73,16 +65,18 @@ applications=(
 
 # Install Applications
 # ------------------------------------------------------------------------------
-# The applications will be installed in /Applications instead of the default
-# Cask directory location in /Users/$user/Applications.
+# The applications will be installed in /Applications directory.
 
-printf "\n$INFO%s$RESET\n" "Installing applications..."
-brew cask install --appdir="/Applications" ${applications[@]}
+brew cask install ${applications[@]}
+
+printf "\n$INFO - %s$RESET\n" "Cask applications install completed."
+
 
 
 # Cleanup
 # ------------------------------------------------------------------------------
 
-printf "\n$INFO%s$RESET\n" "Cleaning up Homebrew Casks..."
-brew cask cleanup
+brew cleanup
+
+printf "\n$INFO - %s$RESET\n" "Cleaning up Homebrew."
 

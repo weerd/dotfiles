@@ -88,8 +88,12 @@ printf "\n$INFO%s$RESET\n" "8) Installing native applications."
 ./scripts/apps_installations.sh
 
 
+# Reload bash_profile
+# ------------------------------------------------------------------------------
 
-# source ~/.bash_profile
+source ~/.bash_profile
+
+
 
 # Bootsrap Process Completed
 # ------------------------------------------------------------------------------

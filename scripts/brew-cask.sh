@@ -54,6 +54,7 @@ applications=(
   steam
   sequel-pro
   simple-comic
+  spotify
   vagrant
   virtualbox
   visual-studio-code

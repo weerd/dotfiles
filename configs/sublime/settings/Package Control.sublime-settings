@@ -10,14 +10,18 @@
 		"DocBlockr",
 		"EditorConfig",
 		"Emmet",
+		"GitGutter",
+		"JsPrettier",
 		"Laravel Blade Highlighter",
 		"MarkdownEditing",
 		"Origami",
 		"Package Control",
 		"PHP Companion",
+		"PlainTasks",
 		"Sass",
 		"SublimeLinter",
 		"SublimeLinter-html-tidy",
-		"SublimeLinter-php"
+		"SublimeLinter-php",
+		"Varnish VCL"
 	]
 }

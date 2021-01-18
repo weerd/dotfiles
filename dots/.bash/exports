@@ -3,15 +3,23 @@
 # ------------------------------------------------------------------------------
 # Exports
 # ------------------------------------------------------------------------------
+export PATH=/usr/local/sbin:$PATH
+# @todo investigate why running source ~/.bash_profile does not take into account
+# updates made to $PATH.
 
+export PATH=/usr/local/opt/node@14/bin:$PATH
 
 
 # PATH
 # ------------------------------------------------------------------------------
-export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
+# @see https://github.com/Homebrew/legacy-homebrew/issues/19238
+# @see https://apple.stackexchange.com/questions/69223/how-to-replace-mac-os-x-utilities-with-gnu-core-utilities
+# export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 
 
 
 # MANPATH
 # ------------------------------------------------------------------------------
-export MANPATH=$(brew --prefix coreutils)/libexec/gnuman:$MANPATH
+# @see https://github.com/Homebrew/legacy-homebrew/issues/19238
+# @see https://apple.stackexchange.com/questions/69223/how-to-replace-mac-os-x-utilities-with-gnu-core-utilities
+# export MANPATH=$(brew --prefix coreutils)/libexec/gnuman:$MANPATH

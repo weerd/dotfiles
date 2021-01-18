@@ -3,13 +3,16 @@
 	"caret_style": "phase",
 	"color_scheme": "Packages/User/SublimeLinter/Twilight (SL).tmTheme",
 	"disable_tab_abbreviations": true,
+	"ensure_newline_at_eof_on_save": true,
 	"fade_fold_buttons": true,
 	"fold_buttons": true,
+	"font_size": 17,
 	"gutter": true,
 	"highlight_line": true,
 	"ignored_packages":
 	[
 		"Markdown",
+		"Pretty JSON",
 		"Vintage"
 	],
 	"indent_guide_options":

@@ -33,12 +33,13 @@ alias la="ls -la"
 # ------------------------------------------------------------------------------
 
 alias desk='cd ~/Desktop'
-alias code='cd ~/Code'
+alias dev='cd ~/Code'
 alias hosts='subl /etc/hosts'
 
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
+alias nodemods='cd /usr/local/lib/node_modules'
 
 
 # Git
@@ -50,12 +51,16 @@ alias gd="git diff"
 alias gr="git rm"
 alias gs="git status"
 alias gco="git checkout"
+alias gcm="git checkout master"
 alias gpl="git pull"
 alias gph="git push"
+alias gl="git log --pretty=oneline"
 
 
 
-# Laravel
+# Misc
 # ------------------------------------------------------------------------------
 
 alias homestead='function __homestead() { (cd ~/Code/homestead && vagrant $*); unset -f __homestead; }; __homestead'
+
+alias server='php -S localhost:1982'

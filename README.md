@@ -13,7 +13,7 @@ For example, you should definitely edit the **/dots/.gitconfig** file and change
 
 Alternatively, you can also just use this repository as a guide for setting up your own custom dotfiles or you can try and run only specific scripts instead of the full setup.
 
-Whatever floats your boat is cool with me.
+Whatever floats your boat is cool with me 💃!
 
 
 
@@ -21,16 +21,17 @@ Whatever floats your boat is cool with me.
 
 1) Install **Xcode** from the Mac App Store and run it to accept the license and install **git**.
 
-2) Generate an SSH key for computer. Use these [instructions](https://help.github.com/articles/generating-ssh-keys/) if you don't remember how to do it.
+2) Generate an SSH key for the computer. Use these [instructions](https://help.github.com/articles/generating-ssh-keys/) if you don't remember how to do it.
 
-3) Add SSH key to [GitHub](https://github.com) and [BitBucket](https://bitbucket.com).
+3) Add SSH key to [GitHub](https://github.com) (and/or any other git versioning service, like [BitBucket](https://bitbucket.com) for example).
+
 You can copy your public SSH key using the following command:
 
 ```shell
 $ pbcopy < ~/.ssh/id_rsa.pub
 ```
 
-4) Run the following command from the terminal:
+4) Run the following command from the terminal to download the install.sh script file from this repo, and subsequently run it to begin the installation and setup process:
 
 ```shell
 $ curl https://raw.githubusercontent.com/weerd/dotfiles/master/install.sh | sh

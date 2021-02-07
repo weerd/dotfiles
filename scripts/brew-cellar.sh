@@ -42,6 +42,9 @@ binaries=(
   node
   tree
 
+  # Miscellaneous
+  youtube-dl
+  
 )
 
 

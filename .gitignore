@@ -1,2 +1,4 @@
 .DS_Store
 tokens
+environment_variables
+local_aliases

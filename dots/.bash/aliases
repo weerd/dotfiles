@@ -33,12 +33,14 @@ alias la="ls -la"
 # ------------------------------------------------------------------------------
 
 alias desk='cd ~/Desktop'
-alias code='cd ~/Code'
+alias dev='cd ~/Code'
 alias hosts='subl /etc/hosts'
 
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
+
+alias gnm="open /usr/local/lib/node_modules"
 
 
 # Git
@@ -50,6 +52,7 @@ alias gd="git diff"
 alias gr="git rm"
 alias gs="git status"
 alias gco="git checkout"
+alias gcm="git checkout master"
 alias gpl="git pull"
 alias gph="git push"
 
@@ -59,3 +62,40 @@ alias gph="git push"
 # ------------------------------------------------------------------------------
 
 alias homestead='function __homestead() { (cd ~/Code/homestead && vagrant $*); unset -f __homestead; }; __homestead'
+
+
+
+# Papertrail
+# ------------------------------------------------------------------------------
+# Download all logs matching a pattern.
+# Usage: pt-archive <start date> <end date> <filter> <output>
+# $ pt-archive 2018-12-01 2018-12-02 "dosomething-northstar" "ns-logs"
+
+function pt-archive() {
+  DIRECTORY=$(pwd)
+  FILTER="${3:-\".*\"}"
+
+  cd $(mktemp -d)
+
+  echo "Downloading log archives from $1 to $2..."
+  curl -sH "X-Papertrail-Token: $PAPERTRAIL_API_KEY" https://papertrailapp.com/api/v1/archives.json |
+    grep -o '"filename":"[^"]*"' | egrep -o '[0-9-]+' |
+    awk '$0 >= "'$1'" && $0 < "'$2'" {
+      print "output " $0 ".tsv.gz"
+      print "url https://papertrailapp.com/api/v1/archives/" $0 "/download"
+    }' | curl --progress-bar -fLH "X-Papertrail-Token: $PAPERTRAIL_API_KEY" -K-
+
+
+  echo "Unzipping compressed archives..."
+  gunzip *.tsv.gz
+
+  echo "Filtering by '$FILTER' & concatenating to one file..."
+  cat *.tsv | grep -E $FILTER > $DIRECTORY/$4.tsv
+  
+  echo "Cleaning up..."
+  rm *.tsv
+
+  echo "All done! 🎊 $DIRECTORY/$4.tsv!"
+
+  cd - > /dev/null
+}

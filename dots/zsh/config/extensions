@@ -1,0 +1,19 @@
+# ------------------------------------------------------------------------------
+# Extensions
+# ------------------------------------------------------------------------------
+
+
+
+# zsh-syntax-highlighting
+# (note, according to the docs, this must be loaded LAST)
+# https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
+if [[ -r ~/.zsh/config/packages/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
+     source ~/.zsh/config/packages/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+else
+  # git clone (download the repository) or throw error.
+  # git@github.com:zsh-users/zsh-syntax-highlighting.git
+fi
+
+
+# zsh-autosuggestions
+# git@github.com:zsh-users/zsh-autosuggestions.git

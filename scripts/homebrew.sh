@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 
 # ------------------------------------------------------------------------------
@@ -7,18 +7,14 @@
 
 
 
-source ./extras/colors
-
-
-
 # Homebrew Package Manager
 # ------------------------------------------------------------------------------
 # Check if Homebrew exists and if not install it.
 
-if [ ! $(which brew) ]; then
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-  printf "\n$SUCCESS - %s$RESET\n" "Homebrew installed."
+if [ ! type brew &>/dev/null ]; then
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   
+   print "Homebrew installed."
 else
-  printf "\n$INFO - %s$RESET\n" "Homebrew already installed, located in $(which brew)."
+   print "Homebrew already installed."
 fi

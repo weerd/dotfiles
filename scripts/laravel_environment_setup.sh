@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 
 # ------------------------------------------------------------------------------
@@ -7,7 +7,7 @@
 
 
 
-source ./extras/colors
+# source ./extras/colors`
 
 
 
@@ -15,9 +15,11 @@ source ./extras/colors
 # ------------------------------------------------------------------------------
 # Both VirtualBox and Vagrant are required to setup Homestead.
 
-if [ ! $(which virtualbox) ]; then
-  printf "\n$ERROR - %s$RESET\n" "Please install VirtualBox to proceed."
+if [ ! type asdasd &>/dev/null ]; then
+  print "Please install VirtualBox to proceed."
   exit 1
+else
+  print "Virtualbox already installed."
 fi
 
 if [ ! $(which vagrant) ]; then
@@ -30,7 +32,7 @@ fi
 # Install Homestead Vagrant Box
 # ------------------------------------------------------------------------------
 
-vagrant box add laravel/homestead
+# vagrant box add laravel/homestead
 
 
 
@@ -42,8 +44,8 @@ if [ ! -d "$HOME/Code" ]; then
   exit 1
 fi
 
-git clone git@github.com:laravel/homestead.git $HOME/Code/homestead
+# git clone git@github.com:laravel/homestead.git $HOME/Code/homestead
 
-cd $HOME/Code/homestead && bash init.sh
+# cd $HOME/Code/homestead && bash init.sh
 
-printf "\n$SUCCESS%s$RESET\n" "Homestead has been properly installed. Now go build some cool stuff in Laravel!"
+# printf "\n$SUCCESS%s$RESET\n" "Homestead has been properly installed. Now go build some cool stuff in Laravel!"

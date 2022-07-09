@@ -43,6 +43,7 @@ binaries=(
   tree
 
   # Miscellaneous
+  mas
   youtube-dl
   
 )

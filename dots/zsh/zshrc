@@ -1,0 +1,27 @@
+# zshrc - Diego Lorenzo
+
+# Exports
+export PATH="/usr/local/opt/node@14/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH" # brew executables path
+
+
+# Shell Options
+
+# Change directories when path entered without specifying 'cd'
+setopt autocd
+
+
+# ------------------------------------------------------------------------------
+# Bash Profile
+# ------------------------------------------------------------------------------
+
+
+source ~/.zsh/config/prompt
+source ~/.zsh/config/aliases
+source ~/.zsh/config/bindings
+source ~/.zsh/config/extensions # @TODO: script needs to create the config/packages directory that is gitignored
+
+
+# ZSH Version
+
+echo zsh v$ZSH_VERSION

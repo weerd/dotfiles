@@ -52,13 +52,20 @@ applications=(
   postman
   send-to-kindle
   steam
-  sequel-pro
+  # sequel-pro
   simple-comic
   spotify
+  tableplus
   vagrant
-  virtualbox
   visual-studio-code
   vlc
+
+)
+
+require_approval=(
+
+  # Mac will block installation so will need to approve the extension @see: https://developer.apple.com/library/archive/technotes/tn2459/_index.html
+  virtualbox
 
 )
 
@@ -80,4 +87,3 @@ printf "\n$INFO - %s$RESET\n" "Cask applications install completed."
 brew cleanup
 
 printf "\n$INFO - %s$RESET\n" "Cleaning up Homebrew."
-

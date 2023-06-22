@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 
 # ------------------------------------------------------------------------------
@@ -9,21 +9,21 @@
 
 # Setup Code Directory
 # ------------------------------------------------------------------------------
-# Create "~/Code" directory that will house all code projects and repos, then 
-# download this dotfiles repo and run the "bootstrap.sh" file.
+# Create "~/Code" directory that will house all code repositories, then 
+# download this dotfiles repository and run the "bootstrap.sh" file.
 
-dir="$HOME/Code"
+CODE_DIRECTORY="$HOME/Code"
 
-# If Code does not exist or is not a directory, create it.
-if [ ! -d $dir ]
+# If "Code" does not exist or is not a directory, create it.
+if [ ! -d $CODE_DIRECTORY ]
 then
-	mkdir -p $dir
+	mkdir -p $CODE_DIRECTORY
 fi
 
-cd $dir
+cd $CODE_DIRECTORY
 
-# If dotfiles does not exist or is not a directory, create it.
-if [ ! -d $dir/dotfiles ]
+# If "dotfiles" does not exist or is not a directory, create it.
+if [ ! -d $CODE_DIRECTORY/dotfiles ]
 then
 	git clone git@github.com:weerd/dotfiles.git
 fi
@@ -34,4 +34,4 @@ cd dotfiles
 find ./ -type f -name "*.sh" -exec chmod 755 {} \;
 
 # Begin the setup bootstrapping process.
-bash bootstrap.sh
+zsh bootstrap.sh

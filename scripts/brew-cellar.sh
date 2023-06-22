@@ -44,6 +44,7 @@ binaries=(
 
   # Miscellaneous
   mas
+  yt-dlp
   youtube-dl
   
 )

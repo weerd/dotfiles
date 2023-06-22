@@ -3,6 +3,7 @@
 # ------------------------------------------------------------------------------
 
 
-
+# Change behavior of up & down arrow keys from previous & next commands, to now
+# searching previous commands based on what you initially type.
 bindkey $'^[[A' up-line-or-search    # up arrow
-bindkey $'^[[B' down-line-or-search  # down arrow”
+bindkey $'^[[B' down-line-or-search  # down arrow

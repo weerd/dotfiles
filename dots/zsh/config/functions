@@ -4,31 +4,31 @@
 # Usage: pt-archive <start date> <end date> <filter> <output>
 # $ pt-archive 2018-12-01 2018-12-02 "dosomething-northstar" "ns-logs"
 
-function pt-archive() {
-  DIRECTORY=$(pwd)
-  FILTER="${3:-\".*\"}"
+# function pt-archive() {
+#   DIRECTORY=$(pwd)
+#   FILTER="${3:-\".*\"}"
 
-  cd $(mktemp -d)
+#   cd $(mktemp -d)
 
-  echo "Downloading log archives from $1 to $2..."
-  curl -sH "X-Papertrail-Token: $PAPERTRAIL_API_KEY" https://papertrailapp.com/api/v1/archives.json |
-    grep -o '"filename":"[^"]*"' | egrep -o '[0-9-]+' |
-    awk '$0 >= "'$1'" && $0 < "'$2'" {
-      print "output " $0 ".tsv.gz"
-      print "url https://papertrailapp.com/api/v1/archives/" $0 "/download"
-    }' | curl --progress-bar -fLH "X-Papertrail-Token: $PAPERTRAIL_API_KEY" -K-
+#   echo "Downloading log archives from $1 to $2..."
+#   curl -sH "X-Papertrail-Token: $PAPERTRAIL_API_KEY" https://papertrailapp.com/api/v1/archives.json |
+#     grep -o '"filename":"[^"]*"' | egrep -o '[0-9-]+' |
+#     awk '$0 >= "'$1'" && $0 < "'$2'" {
+#       print "output " $0 ".tsv.gz"
+#       print "url https://papertrailapp.com/api/v1/archives/" $0 "/download"
+#     }' | curl --progress-bar -fLH "X-Papertrail-Token: $PAPERTRAIL_API_KEY" -K-
 
 
-  echo "Unzipping compressed archives..."
-  gunzip *.tsv.gz
+#   echo "Unzipping compressed archives..."
+#   gunzip *.tsv.gz
 
-  echo "Filtering by '$FILTER' & concatenating to one file..."
-  cat *.tsv | grep -E $FILTER > $DIRECTORY/$4.tsv
+#   echo "Filtering by '$FILTER' & concatenating to one file..."
+#   cat *.tsv | grep -E $FILTER > $DIRECTORY/$4.tsv
   
-  echo "Cleaning up..."
-  rm *.tsv
+#   echo "Cleaning up..."
+#   rm *.tsv
 
-  echo "All done! 🎊 $DIRECTORY/$4.tsv!"
+#   echo "All done! 🎊 $DIRECTORY/$4.tsv!"
 
-  cd - > /dev/null
-}
+#   cd - > /dev/null
+# }

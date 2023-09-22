@@ -33,7 +33,7 @@ alias ll="ls -la"
 alias desk='cd ~/Desktop'
 alias dev='cd ~/Code'
 alias hosts='code /etc/hosts'
-alias notes='code /Users/Weerd/Dropbox/Code\ Support/development_notes.code-workspace'
+# alias notes='code /Users/Weerd/Dropbox/Code\ Support/development_notes.code-workspace'
 
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
@@ -51,7 +51,7 @@ alias gd="git diff"
 alias gr="git rm"
 alias gs="git status"
 alias gco="git checkout"
-alias gcm="git checkout master"
+alias gcom="git checkout main"
 alias gpl="git pull"
 alias gph="git push"
 
@@ -60,6 +60,17 @@ alias gph="git push"
 # Laravel
 # ------------------------------------------------------------------------------
 
+# Homestead
 #  @TODO: check if this has been updated.
 #  @TODO: should this go in functions file.
-alias homestead='function __homestead() { (cd ~/Code/homestead && vagrant $*); unset -f __homestead; }; __homestead'
+# alias homestead='function __homestead() { (cd ~/Code/homestead && vagrant $*); unset -f __homestead; }; __homestead'
+
+# Sail
+alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
+
+
+
+# Youtube DLP
+# ------------------------------------------------------------------------------
+
+# alias ytAudio="yt-dlp -f 'ba' -x --audio-format m4a 'youtubelinkhere.com'"

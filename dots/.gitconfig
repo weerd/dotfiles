@@ -1,22 +1,9 @@
-[alias]
-  s = status
-  a = add
-  r = rm
-  c = commit
-  pl = pull
-  ph = push
-  co = checkout
-
 [user]
-  name = Diego Lorenzo
   email = diego@diegolorenzo.com
+  name = Diego Lorenzo
 
 [color]
   ui = true
 
 [core]
   excludesfile = ~/.gitignore
-
-[push]
-  default = simple
-  

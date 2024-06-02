@@ -33,7 +33,6 @@ alias ll="ls -la"
 alias desk='cd ~/Desktop'
 alias dev='cd ~/Code'
 alias hosts='code /etc/hosts'
-# alias notes='code /Users/Weerd/Dropbox/Code\ Support/development_notes.code-workspace'
 
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
@@ -67,10 +66,3 @@ alias gph="git push"
 
 # Sail
 alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
-
-
-
-# Youtube DLP
-# ------------------------------------------------------------------------------
-
-# alias ytAudio="yt-dlp -f 'ba' -x --audio-format m4a 'youtubelinkhere.com'"

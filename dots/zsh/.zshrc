@@ -39,6 +39,7 @@ setopt autocd
 source $zshDir/config/prompt
 source $zshDir/config/aliases
 source $zshDir/config/exports
+source $zshDir/config/functions
 # source ~/.zsh/config/bindings
 # source ~/.zsh/config/extensions # @TODO: script needs to create the config/packages directory that is gitignored
 

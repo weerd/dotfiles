@@ -1,5 +1,4 @@
-#!/usr/bin/env zsh
-
+#!/bin/zsh
 
 # ------------------------------------------------------------------------------
 # Main Installation
@@ -14,7 +13,7 @@
 
 CODE_DIRECTORY="$HOME/Code"
 
-# If "Code" does not exist or is not a directory, create it.
+# If ~/Code directory does not exist or is not a directory, create it.
 if [ ! -d $CODE_DIRECTORY ]
 then
 	mkdir -p $CODE_DIRECTORY
@@ -22,7 +21,8 @@ fi
 
 cd $CODE_DIRECTORY
 
-# If "dotfiles" does not exist or is not a directory, create it.
+# If "dotfiles" does not exist or is not a directory, download the repository 
+# to create it.
 if [ ! -d $CODE_DIRECTORY/dotfiles ]
 then
 	git clone git@github.com:weerd/dotfiles.git
@@ -31,7 +31,9 @@ fi
 cd dotfiles
 
 # Make all bash script files in the repository executable.
-find ./ -type f -name "*.sh" -exec chmod 755 {} \;
+# find ./ -type f -name "*.sh" -exec chmod 755 {} \;
 
 # Begin the setup bootstrapping process.
-zsh bootstrap.sh
+# zsh bootstrap.sh
+
+echo "Installation Completed."

@@ -1,5 +1,4 @@
-#!/usr/bin/env bash
-
+#!/bin/zsh
 
 # ------------------------------------------------------------------------------
 # Create Directories
@@ -7,17 +6,13 @@
 
 
 
-source ./extras/colors
-
-
-
-# Create Screenshots Directory
+# Create Screen Captures Directory
 # ------------------------------------------------------------------------------
 
-if [ ! -d $HOME/Screenshots ]; then
-	mkdir -p $HOME/Screenshots
-	
-	printf "\n$SUCCESS - %s$RESET\n" "Screenshots directory created."
+if [ ! -d $HOME/"Screen Captures" ]; then
+	mkdir -p $HOME/"Screen Captures"
+
+	echo "Screen Captures directory created."
 else
-	printf "\n$INFO - %s$RESET\n" "Screenshots directory already exists."
+	echo "Screen Captures directory already exists."
 fi

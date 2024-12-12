@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/zsh
 
 
 # ------------------------------------------------------------------------------
@@ -7,29 +7,33 @@
 
 
 
-source ./extras/colors
-
-
-
 # Link Dotfiles Into Home Directory
 # ------------------------------------------------------------------------------
+# 
+# @see https://www.man7.org/linux/man-pages/man1/bash.1.html#CONDITIONAL_EXPRESSIONS
+# -e is true if file exists.
+# -h is true if file exists and is a symbolic link.
+# ln -sf creates a soft (symbolic) link, and forces the command to overwrite a 
+# file that alread exists.
 
 dir="$HOME/Code"
 
-if [ ! -d ~/.bash ]; then
-	ln -s $dir/dotfiles/dots/.bash ~/.bash
+if [ ! -e ~/.zshenv ] || [ ! -h ~/.zshenv ]; then
+	ln -sf $dir/dotfiles/dots/zsh/.zshenv ~/.zshenv
+
+	echo "Created symlink for .zshenv file."
 fi
 
-if [ ! -e ~/.bash_profile ]; then
-	ln -s $dir/dotfiles/dots/.bash_profile ~/.bash_profile
+if [ ! -e ~/.gitconfig ] || [ ! -h ~/.gitconfig ]; then
+	ln -sf $dir/dotfiles/dots/.gitconfig ~/.gitconfig
+
+	echo "Created symlink for .gitconfig file."
 fi
 
-if [ ! -e ~/.gitconfig ]; then
-	ln -s $dir/dotfiles/dots/.gitconfig ~/.gitconfig
+if [ ! -e ~/.gitignore ] || [ ! -h ~/.gitignore ]; then
+	ln -sf $dir/dotfiles/dots/.gitignore ~/.gitignore
+
+	echo "Created symlink for .gitignore file."
 fi
 
-if [ ! -e ~/.gitignore ]; then
-	ln -s $dir/dotfiles/dots/.gitignore ~/.gitignore
-fi
-
-printf "\n$INFO - %s$RESET\n" "Dotfiles were symlinked into the home directory."
+echo "Dotfiles were symlinked into the home directory."

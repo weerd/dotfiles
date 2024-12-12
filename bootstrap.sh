@@ -1,5 +1,4 @@
-#!/usr/bin/env bash
-
+#!/bin/zsh
 
 # ------------------------------------------------------------------------------
 # Bootstrap
@@ -7,94 +6,94 @@
 
 
 
-# source ./extras/colors
+# # source ./extras/colors
 
 
 
-printf "\n$INFO%s$RESET\n" "Beginning setup bootstrapping..."
+# printf "\n$INFO%s$RESET\n" "Beginning setup bootstrapping..."
 
 
 
-# Create Directories
-# ------------------------------------------------------------------------------
-# Create directories for setup.
+# # Create Directories
+# # ------------------------------------------------------------------------------
+# # Create directories for setup.
 
-printf "\n$INFO%s$RESET\n" "1) Creating necessary directories:"
+# printf "\n$INFO%s$RESET\n" "1) Creating necessary directories:"
 
-./scripts/create_directories.sh
-
-
-
-# Copy & Move Files
-# ------------------------------------------------------------------------------
-# Copy and move files into specified directory that can not be symlinked.
-
-printf "\n$INFO%s$RESET\n" "2) Copying and moving files into specified directories:"
-
-./scripts/copy_move.sh
+# ./scripts/create_directories.sh
 
 
 
-# Symlink Dotfiles
-# ------------------------------------------------------------------------------
-# Symlink necessary dotfiles into home directory.
+# # Copy & Move Files
+# # ------------------------------------------------------------------------------
+# # Copy and move files into specified directory that can not be symlinked.
 
-printf "\n$INFO%s$RESET\n" "3) Symlinking dotfiles into specified directories:"
+# printf "\n$INFO%s$RESET\n" "2) Copying and moving files into specified directories:"
 
-./scripts/symlinks.sh
-
-
-
-# Install Homebrew
-# ------------------------------------------------------------------------------
-
-printf "\n$INFO%s$RESET\n" "4) Installing Homebrew:"
-
-./scripts/homebrew.sh
+# ./scripts/copy_move.sh
 
 
 
-# Install Binary Packages With Homebrew
-# ------------------------------------------------------------------------------
+# # Symlink Dotfiles
+# # ------------------------------------------------------------------------------
+# # Symlink necessary dotfiles into home directory.
 
-printf "\n$INFO%s$RESET\n" "5) Installing binary application packages with Homebrew:"
+# printf "\n$INFO%s$RESET\n" "3) Symlinking dotfiles into specified directories:"
 
-./scripts/brew-cellar.sh
-
-
-
-# Install Native Mac Applications With Cask
-# ------------------------------------------------------------------------------
-
-printf "\n$INFO%s$RESET\n" "6) Installing native applications with Homebrew Cask."
-
-./scripts/brew-cask.sh
-
-
-# Install non-Homebrew Binary Packages
-# ------------------------------------------------------------------------------
-
-printf "\n$INFO%s$RESET\n" "7) Installing binary application packages."
-
-./scripts/bins_installations.sh
+# ./scripts/symlinks.sh
 
 
 
-# Install non-Homebrew Applications
-# ------------------------------------------------------------------------------
+# # Install Homebrew
+# # ------------------------------------------------------------------------------
 
-printf "\n$INFO%s$RESET\n" "8) Installing native applications."
+# printf "\n$INFO%s$RESET\n" "4) Installing Homebrew:"
 
-./scripts/apps_installations.sh
-
-
-# Reload bash_profile
-# ------------------------------------------------------------------------------
-
-source ~/.bash_profile
+# ./scripts/homebrew.sh
 
 
 
-# Bootsrap Process Completed
-# ------------------------------------------------------------------------------
-printf "\n$SUCCESS%s$RESET\n" "Bootstrapping process completed! Enjoy your new setup 🍻"
+# # Install Binary Packages With Homebrew
+# # ------------------------------------------------------------------------------
+
+# printf "\n$INFO%s$RESET\n" "5) Installing binary application packages with Homebrew:"
+
+# ./scripts/brew-cellar.sh
+
+
+
+# # Install Native Mac Applications With Cask
+# # ------------------------------------------------------------------------------
+
+# printf "\n$INFO%s$RESET\n" "6) Installing native applications with Homebrew Cask."
+
+# ./scripts/brew-cask.sh
+
+
+# # Install non-Homebrew Binary Packages
+# # ------------------------------------------------------------------------------
+
+# printf "\n$INFO%s$RESET\n" "7) Installing binary application packages."
+
+# ./scripts/bins_installations.sh
+
+
+
+# # Install non-Homebrew Applications
+# # ------------------------------------------------------------------------------
+
+# printf "\n$INFO%s$RESET\n" "8) Installing native applications."
+
+# ./scripts/apps_installations.sh
+
+
+# # Reload bash_profile
+# # ------------------------------------------------------------------------------
+
+# source ~/.bash_profile
+
+
+
+# # Bootsrap Process Completed
+# # ------------------------------------------------------------------------------
+# printf "\n$SUCCESS%s$RESET\n" "Bootstrapping process completed! Enjoy your new setup 🍻"

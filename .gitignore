@@ -1,5 +1,9 @@
 .DS_Store
+
 tokens
 environment_variables
 local_aliases
+
+/dots/zsh/.zsh_sessions
+/dots/zsh/.zsh_history
 /dots/zsh/config/packages
